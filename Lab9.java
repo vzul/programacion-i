@@ -1,4 +1,4 @@
-public class Main
+public class Main // CHANGE CLASS TO Lab9
 {
     
     // EXERCISE 1
@@ -91,6 +91,39 @@ public class Main
     
     
     // EXERCISE 6
+    static boolean todosN(int col[], int n){
+        return todosNAux(col, 0, n);
+    }
+    
+    static boolean todosNAux(int col[], int i, int n){
+        if(i == col.length){
+            return true;
+        } else if (col[i] != n){
+            return false;
+        } 
+        return todosNAux(col, i+1, n);
+    }
+    
+    
+    
+    
+    // EXERCISE 7
+    static int maxElemento(int[] col){
+        return maxElementoAux(col, 0, col[0]);
+    }
+    
+    static int maxElementoAux(int[] col, int i, int currentMax){
+        if(i == col.length){
+            return currentMax;
+        } else if (col[i] > currentMax){
+            currentMax = col[i];
+        } return maxElementoAux(col, i+1, currentMax);
+        
+        
+    }
+    
+    
+    
     
 	public static void main(String[] args) {
 	    int[] array = {1,2,4};
@@ -100,6 +133,9 @@ public class Main
 	    int[] array5 = {1,6,3,0,4};
 	    int[] array6 = {3,2,5,2,8,1};
 	    int[] array7 = {};
+	    int[] array8 = {2, 2, 2};
+	    int[] array9 = {2, 2, 3, 2};
+	    int[] array10 = {-10,-4,-6};
 	    
 	    // EXERCISE 1
 		System.out.println(sumaElementos(array));
@@ -132,9 +168,20 @@ public class Main
 		
 		
 		// EXERCISE 6
+		System.out.println(todosN(array6, 2));
+		System.out.println(todosN(array7, 2));
+		System.out.println(todosN(array8, 2));
+		System.out.println(todosN(array9, 2));
 		
 		
 		// EXERCISE 7
+		System.out.println(maxElemento(array5));
+		System.out.println(maxElemento(array6));
+		System.out.println(maxElemento(array9));
+		System.out.println(maxElemento(array10));
+		
+		
 		// EXERCISE 8
+		System.out.println();
 	}
 }
