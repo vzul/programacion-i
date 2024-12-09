@@ -6,8 +6,8 @@ static int sumaElementos(int[] col) {
 // Recursive method to sum array elements
 static int sumaElementosAux(int[] col, int i) {
     // Base case: when we've reached beyond the last index
-    if (i >= col.length) {
-        return 0;
+    if (i == col.length - 1) {
+        return col[i];
     }
     
     // Recursive case: current element + sum of the rest
