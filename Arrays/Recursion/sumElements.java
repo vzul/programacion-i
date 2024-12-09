@@ -1,5 +1,9 @@
 // Wrapper method to start recursion
 static int sumaElementos(int[] col) {
+    // If the array is empty, the sum is 0
+    if (col.length == 0) {
+        return 0;
+    }
     return sumaElementosAux(col, 0);
 }
 
