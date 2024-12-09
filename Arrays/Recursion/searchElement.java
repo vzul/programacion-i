@@ -3,9 +3,11 @@
     }
 
     static boolean searchElementAux(int[] col, int i, int target) {
+        // ensures the recursion terminates once the array is fully traversed
        if (i >= col.length){
            return false;
        }
+        // or target is found
        if(col[i] == target){
            return true;
        }
