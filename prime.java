@@ -7,6 +7,7 @@ Check if a number is a prime.
 public class Main {
     // Function to check if a number is prime
     static boolean prime(int num) {
+        boolean flag = true;
         /*
         Explanation:
         1. A prime number is only divisible by 1 and itself.
@@ -22,16 +23,16 @@ public class Main {
 
         // Numbers less than 2 are not prime
         if (num < 2) {
-            return false;
+            flag = false;
         }
 
         // Check divisibility from 2 to the square root of the number
-        for (int i = 2; i <= Math.sqrt(num); i++) { // checking natural numbers
+        for (int i = 2; i <= Math.sqrt(num); i++) { // checking natural numbers --- i MUST START AT 2 !!!!!!!!!!
             if (num % i == 0) {
-                return false; // Divisible by a number other than 1 and itself
+                flag = false; // Divisible by a number other than 1 and itself
             }
         }
-        return true; // Prime if no divisors found
+        return flag; // Prime if no divisors found
     }
 
     public static void main(String[] args) {
