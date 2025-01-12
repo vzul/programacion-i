@@ -7,3 +7,7 @@ public int sum2(int[] nums) {
         return nums[0] + nums[1]; // Return the sum of the first two elements
     }
 }
+
+/* The condition if (nums.length < 2) comes first and assumes there is at 
+    least one element in the array. However, if nums.length == 0, the code 
+    will attempt to access nums[0], causing an ArrayIndexOutOfBoundsException. */
